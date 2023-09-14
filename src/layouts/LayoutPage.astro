@@ -2,7 +2,7 @@
 import '../styles/global.css'
 
 import 'aos/dist/aos.css'
-import Navbar from '../components/Navbar.astro';
+import Navbar from '../components/NavbarPage.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -14,24 +14,15 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Elisa Klein - Développeuse Web Junior</title>
-		<meta property="description" content="Développeuse Web Junior - Passionnée par le développement web, je suis à la recherche d'une opportunité pour mettre en pratique mes compétences"/>
+		<title>Elisa Klein - Développeuse Back-end</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script is:inline type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-		</script>
-		<script is:inline type="text/javascript">
-		(function(){
-			emailjs.init(import.meta.env.USER_ID);
-		})();
 		</script>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">
 		<Navbar/>
-		<main id="main" class="container mt-3 mx-auto lg:px-16 relative overflow-x-hidden">
+		<main id="main" class="container mt-3 mx-auto lg:px-16">
 			<slot />
 		</main>
 		<Footer/>
@@ -42,17 +33,6 @@ import Footer from '../components/Footer.astro';
 	<script is:inline>
 		AOS.init();
 	</script>
-	<script>
-		const $collapseEl = document.querySelector('#navbar-collapse');
-		const $scrollSpyEl = document.querySelector('[data-hs-scrollspy="#main"]');
-
-		$scrollSpyEl.addEventListener('scroll.hs.scrollspy', () => {
-		if (window.outerWidth <= 639 && $collapseEl.classList.contains('open')) {
-			HSCollapse.hide($collapseEl)
-		}
-		})
-</script>
-
 </html>
 
 <style is:global>

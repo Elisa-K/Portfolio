@@ -1,0 +1,60 @@
+@font-face {
+	font-family: "Giaza";
+	src: url("../fonts/Giaza.woff");
+}
+
+:root {
+	--primary: #edf1d6;
+	--secondary: #75826A;
+}
+
+html {
+	scroll-padding-top: 115px;
+	/* height of sticky header */
+}
+
+section {
+	padding-top: 115px;
+	padding-bottom: 115px;
+}
+
+
+body {
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary) var(--primary);
+}
+
+
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--primary);
+	border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--secondary);
+	border-radius: 14px;
+}
+
+.modal-body {
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary) var(#fff) !important;
+}
+
+.modal-body::-webkit-scrollbar {
+	width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+	background: var(#fff);
+	border-radius: 5px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+	background-color: var(--secondary);
+	border-radius: 14px;
+}
